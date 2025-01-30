@@ -1,0 +1,323 @@
+2025-01-29 16:52:57,814 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 16:52:57,814 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 16:52:57,816 - INFO -  * Restarting with stat
+2025-01-29 16:52:58,360 - WARNING -  * Debugger is active!
+2025-01-29 16:52:58,368 - INFO -  * Debugger PIN: 106-298-193
+2025-01-29 16:53:03,578 - INFO - 127.0.0.1 - - [29/Jan/2025 16:53:03] "GET / HTTP/1.1" 200 -
+2025-01-29 16:53:03,600 - INFO - 127.0.0.1 - - [29/Jan/2025 16:53:03] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-29 16:53:03,601 - INFO - 127.0.0.1 - - [29/Jan/2025 16:53:03] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-29 16:53:03,607 - INFO - 127.0.0.1 - - [29/Jan/2025 16:53:03] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=qukqfYu4utbNyOU4OYtc HTTP/1.1[0m" 304 -
+2025-01-29 16:53:14,859 - INFO - 🚀 Wysyłamy zapytanie do API KD100: 
+Headers: {'API-Key': 'YnTXJnvAqwfy1686', 'signature': 'C634B2B7949ED2DBED814BFBE4CD5218', 'Content-Type': 'application/json; charset=utf-8'}
+Payload: {
+    "carrier_id": "usps",
+    "tracking_number": "9400111899561590599681",
+    "area_show": 1,
+    "order": "desc",
+    "phone": "",
+    "ship_from": "",
+    "ship_to": ""
+}
+2025-01-29 16:53:17,117 - INFO - 🔍 API Response for 9400111899561590599681: {"code":200,"message":"OK","data":{"carrier_id":"usps","tracking_number":"9400111899561590599681","order_status_code":3,"items":[{"context":"[CLEVELAND, GA 30528]Delivered, PO Box (Your item has been delivered and is available at a PO Box at 7:51 am on December 9, 2024 in CLEVELAND, GA 30528.)","time":"2024-12-09 07:51:00","order_status_code":3,"order_status_description":"Delivered","location":"CLEVELAND, GA 30528","area_name":null},{"context":"[CLEVELAND, GA 30528]Arrived at Hub","time":"2024-12-08 12:41:00","order_status_code":0,"order_status_description":"In transit","location":"CLEVELAND, GA 30528","area_name":null},{"context":"[CLEVELAND, GA 30528]Arrived at USPS Facility","time":"2024-12-08 05:57:00","order_status_code":0,"order_status_description":"In transit","location":"CLEVELAND, GA 30528","area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Departed USPS Regional Facility","time":"2024-12-08 04:36:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-06 00:00:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Arrived at USPS Regional Facility","time":"2024-12-05 10:17:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-05 09:45:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Departed USPS Regional Facility","time":"2024-12-05 09:01:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Arrived at USPS Regional Facility","time":"2024-12-05 06:32:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-05 05:27:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-04 17:08:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-04 11:50:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"[OAK CREEK WI DISTRIBUTION CENTER]Departed USPS Regional Facility","time":"2024-12-04 06:44:00","order_status_code":0,"order_status_description":"In transit","location":"OAK CREEK WI DISTRIBUTION CENTER","area_name":null},{"context":"[OAK CREEK WI DISTRIBUTION CENTER]Arrived at USPS Regional Origin Facility","time":"2024-12-03 01:54:00","order_status_code":0,"order_status_description":"In transit","location":"OAK CREEK WI DISTRIBUTION CENTER","area_name":null},{"context":"[APPLETON, WI 54914]Accepted at USPS Origin Facility","time":"2024-12-03 00:39:00","order_status_code":0,"order_status_description":"In transit","location":"APPLETON, WI 54914","area_name":null},{"context":"[APPLETON, WI 54914]Shipping Label Created, USPS Awaiting Item","time":"2024-12-02 15:49:00","order_status_code":1,"order_status_description":"Accepted","location":"APPLETON, WI 54914","area_name":null}]}}
+2025-01-29 16:53:17,137 - INFO - 127.0.0.1 - - [29/Jan/2025 16:53:17] "POST /track_or_add HTTP/1.1" 200 -
+2025-01-30 12:19:04,528 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-30 12:19:04,530 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-30 12:19:04,532 - INFO -  * Restarting with stat
+2025-01-30 12:19:05,238 - WARNING -  * Debugger is active!
+2025-01-30 12:19:05,249 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 12:19:17,827 - INFO - 127.0.0.1 - - [30/Jan/2025 12:19:17] "GET / HTTP/1.1" 200 -
+2025-01-30 12:19:17,849 - INFO - 127.0.0.1 - - [30/Jan/2025 12:19:17] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-30 12:19:17,850 - INFO - 127.0.0.1 - - [30/Jan/2025 12:19:17] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-30 12:23:38,114 - INFO - 127.0.0.1 - - [30/Jan/2025 12:23:38] "GET / HTTP/1.1" 200 -
+2025-01-30 12:28:44,819 - INFO - 🚀 Wysyłamy zapytanie do API KD100: 
+Headers: {'API-Key': 'YnTXJnvAqwfy1686', 'signature': '49C9188A67CCF3277490A9D7FBCA6AA8', 'Content-Type': 'application/json; charset=utf-8'}
+Payload: {
+    "carrier_id": "usps",
+    "tracking_number": "11",
+    "area_show": 1,
+    "order": "desc",
+    "phone": "",
+    "ship_from": "",
+    "ship_to": ""
+}
+2025-01-30 12:28:46,203 - INFO - 🔍 API Response for 11: {"code":105,"message":"[tracking_number] length must be between 3 and 32"}
+2025-01-30 12:28:46,203 - INFO - 🛠️ Zapisujemy paczkę 11 ze statusem: Nieznany
+2025-01-30 12:28:46,213 - INFO - 127.0.0.1 - - [30/Jan/2025 12:28:46] "[32mPOST /track_or_add HTTP/1.1[0m" 302 -
+2025-01-30 12:28:46,224 - INFO - 127.0.0.1 - - [30/Jan/2025 12:28:46] "GET / HTTP/1.1" 200 -
+2025-01-30 12:28:48,906 - INFO - 127.0.0.1 - - [30/Jan/2025 12:28:48] "GET /edit/1 HTTP/1.1" 200 -
+2025-01-30 12:28:57,693 - INFO - 127.0.0.1 - - [30/Jan/2025 12:28:57] "[35m[1mPOST /edit/1 HTTP/1.1[0m" 500 -
+2025-01-30 12:28:57,705 - INFO - 127.0.0.1 - - [30/Jan/2025 12:28:57] "GET /edit/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-01-30 12:28:57,709 - INFO - 127.0.0.1 - - [30/Jan/2025 12:28:57] "[36mGET /edit/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-30 12:28:57,733 - INFO - 127.0.0.1 - - [30/Jan/2025 12:28:57] "GET /edit/1?__debugger__=yes&cmd=resource&f=console.png&s=cfnj0P0jgShbeiuV0PwV HTTP/1.1" 200 -
+2025-01-30 12:35:33,964 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 12:35:34,089 - INFO -  * Restarting with stat
+2025-01-30 12:35:34,692 - WARNING -  * Debugger is active!
+2025-01-30 12:35:34,700 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 12:35:44,490 - INFO - ✏️ Zaktualizowano nazwę paczki 11
+2025-01-30 12:35:44,492 - INFO - 127.0.0.1 - - [30/Jan/2025 12:35:44] "[32mPOST /edit/1 HTTP/1.1[0m" 302 -
+2025-01-30 12:35:46,083 - INFO - 127.0.0.1 - - [30/Jan/2025 12:35:46] "GET / HTTP/1.1" 200 -
+2025-01-30 12:35:49,389 - INFO - 127.0.0.1 - - [30/Jan/2025 12:35:49] "GET /edit/1 HTTP/1.1" 200 -
+2025-01-30 12:35:51,264 - INFO - ✏️ Zaktualizowano nazwę paczki 11
+2025-01-30 12:35:51,265 - INFO - 127.0.0.1 - - [30/Jan/2025 12:35:51] "[32mPOST /edit/1 HTTP/1.1[0m" 302 -
+2025-01-30 12:35:51,275 - INFO - 127.0.0.1 - - [30/Jan/2025 12:35:51] "GET / HTTP/1.1" 200 -
+2025-01-30 12:41:20,369 - INFO - 127.0.0.1 - - [30/Jan/2025 12:41:20] "GET / HTTP/1.1" 200 -
+2025-01-30 12:44:56,142 - INFO - 127.0.0.1 - - [30/Jan/2025 12:44:56] "GET / HTTP/1.1" 200 -
+2025-01-30 12:44:57,159 - INFO - 127.0.0.1 - - [30/Jan/2025 12:44:57] "GET / HTTP/1.1" 200 -
+2025-01-30 12:46:00,796 - INFO - 127.0.0.1 - - [30/Jan/2025 12:46:00] "GET / HTTP/1.1" 200 -
+2025-01-30 12:48:17,027 - INFO - 127.0.0.1 - - [30/Jan/2025 12:48:17] "GET / HTTP/1.1" 200 -
+2025-01-30 12:48:31,411 - INFO - 🚀 Wysyłamy zapytanie do API KD100: 
+Headers: {'API-Key': 'YnTXJnvAqwfy1686', 'signature': 'C634B2B7949ED2DBED814BFBE4CD5218', 'Content-Type': 'application/json; charset=utf-8'}
+Payload: {
+    "carrier_id": "usps",
+    "tracking_number": "9400111899561590599681",
+    "area_show": 1,
+    "order": "desc",
+    "phone": "",
+    "ship_from": "",
+    "ship_to": ""
+}
+2025-01-30 12:48:32,889 - INFO - 🔍 API Response for 9400111899561590599681: {"code":200,"message":"OK","data":{"carrier_id":"usps","tracking_number":"9400111899561590599681","order_status_code":3,"items":[{"context":"[CLEVELAND, GA 30528]Delivered, PO Box (Your item has been delivered and is available at a PO Box at 7:51 am on December 9, 2024 in CLEVELAND, GA 30528.)","time":"2024-12-09 07:51:00","order_status_code":3,"order_status_description":"Delivered","location":"CLEVELAND, GA 30528","area_name":null},{"context":"[CLEVELAND, GA 30528]Arrived at Hub","time":"2024-12-08 12:41:00","order_status_code":0,"order_status_description":"In transit","location":"CLEVELAND, GA 30528","area_name":null},{"context":"[CLEVELAND, GA 30528]Arrived at USPS Facility","time":"2024-12-08 05:57:00","order_status_code":0,"order_status_description":"In transit","location":"CLEVELAND, GA 30528","area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Departed USPS Regional Facility","time":"2024-12-08 04:36:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-06 00:00:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Arrived at USPS Regional Facility","time":"2024-12-05 10:17:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-05 09:45:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Departed USPS Regional Facility","time":"2024-12-05 09:01:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Arrived at USPS Regional Facility","time":"2024-12-05 06:32:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-05 05:27:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-04 17:08:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-04 11:50:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"[OAK CREEK WI DISTRIBUTION CENTER]Departed USPS Regional Facility","time":"2024-12-04 06:44:00","order_status_code":0,"order_status_description":"In transit","location":"OAK CREEK WI DISTRIBUTION CENTER","area_name":null},{"context":"[OAK CREEK WI DISTRIBUTION CENTER]Arrived at USPS Regional Origin Facility","time":"2024-12-03 01:54:00","order_status_code":0,"order_status_description":"In transit","location":"OAK CREEK WI DISTRIBUTION CENTER","area_name":null},{"context":"[APPLETON, WI 54914]Accepted at USPS Origin Facility","time":"2024-12-03 00:39:00","order_status_code":0,"order_status_description":"In transit","location":"APPLETON, WI 54914","area_name":null},{"context":"[APPLETON, WI 54914]Shipping Label Created, USPS Awaiting Item","time":"2024-12-02 15:49:00","order_status_code":1,"order_status_description":"Accepted","location":"APPLETON, WI 54914","area_name":null}]}}
+2025-01-30 12:48:32,890 - INFO - 🛠️ Zapisujemy paczkę 9400111899561590599681 ze statusem: Delivered
+2025-01-30 12:48:32,900 - INFO - 127.0.0.1 - - [30/Jan/2025 12:48:32] "[32mPOST /track_or_add HTTP/1.1[0m" 302 -
+2025-01-30 12:48:32,911 - INFO - 127.0.0.1 - - [30/Jan/2025 12:48:32] "GET / HTTP/1.1" 200 -
+2025-01-30 12:48:37,415 - INFO - 127.0.0.1 - - [30/Jan/2025 12:48:37] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 12:48:52,420 - INFO - ✏️ Zaktualizowano nazwę paczki 9400111899561590599681
+2025-01-30 12:48:52,420 - INFO - 127.0.0.1 - - [30/Jan/2025 12:48:52] "[32mPOST /edit/2 HTTP/1.1[0m" 302 -
+2025-01-30 12:48:52,434 - INFO - 127.0.0.1 - - [30/Jan/2025 12:48:52] "GET / HTTP/1.1" 200 -
+2025-01-30 12:49:03,783 - INFO - 127.0.0.1 - - [30/Jan/2025 12:49:03] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 12:53:15,491 - INFO - 127.0.0.1 - - [30/Jan/2025 12:53:15] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 12:55:25,458 - INFO - 127.0.0.1 - - [30/Jan/2025 12:55:25] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 12:57:18,877 - INFO - 127.0.0.1 - - [30/Jan/2025 12:57:18] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 12:57:39,842 - INFO - 127.0.0.1 - - [30/Jan/2025 12:57:39] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 12:57:49,115 - INFO - 127.0.0.1 - - [30/Jan/2025 12:57:49] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 12:57:59,812 - INFO - 127.0.0.1 - - [30/Jan/2025 12:57:59] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 13:01:43,608 - INFO - 127.0.0.1 - - [30/Jan/2025 13:01:43] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 13:04:15,402 - INFO - 127.0.0.1 - - [30/Jan/2025 13:04:15] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 13:04:17,519 - INFO - 127.0.0.1 - - [30/Jan/2025 13:04:17] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 13:04:18,877 - INFO - 127.0.0.1 - - [30/Jan/2025 13:04:18] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 13:04:29,977 - INFO - 127.0.0.1 - - [30/Jan/2025 13:04:29] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 13:06:38,662 - INFO - 127.0.0.1 - - [30/Jan/2025 13:06:38] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 13:06:39,817 - INFO - 127.0.0.1 - - [30/Jan/2025 13:06:39] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 13:06:40,703 - INFO - 127.0.0.1 - - [30/Jan/2025 13:06:40] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 13:06:41,424 - INFO - 127.0.0.1 - - [30/Jan/2025 13:06:41] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 13:12:05,175 - INFO - 127.0.0.1 - - [30/Jan/2025 13:12:05] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 13:12:18,676 - INFO - ✏️ Zaktualizowano nazwę paczki 9400111899561590599681
+2025-01-30 13:12:18,676 - INFO - 127.0.0.1 - - [30/Jan/2025 13:12:18] "[32mPOST /edit/2 HTTP/1.1[0m" 302 -
+2025-01-30 13:12:18,686 - INFO - 127.0.0.1 - - [30/Jan/2025 13:12:18] "GET / HTTP/1.1" 200 -
+2025-01-30 13:12:27,249 - INFO - 127.0.0.1 - - [30/Jan/2025 13:12:27] "GET /edit/1 HTTP/1.1" 200 -
+2025-01-30 13:12:29,558 - INFO - 127.0.0.1 - - [30/Jan/2025 13:12:29] "GET / HTTP/1.1" 200 -
+2025-01-30 13:12:29,575 - INFO - 127.0.0.1 - - [30/Jan/2025 13:12:29] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-30 13:12:29,588 - INFO - 127.0.0.1 - - [30/Jan/2025 13:12:29] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-30 13:13:03,852 - INFO - 127.0.0.1 - - [30/Jan/2025 13:13:03] "GET /edit/1 HTTP/1.1" 200 -
+2025-01-30 13:13:09,595 - INFO - 127.0.0.1 - - [30/Jan/2025 13:13:09] "GET / HTTP/1.1" 200 -
+2025-01-30 13:13:09,601 - INFO - 127.0.0.1 - - [30/Jan/2025 13:13:09] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-30 13:13:09,601 - INFO - 127.0.0.1 - - [30/Jan/2025 13:13:09] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-30 13:14:19,407 - INFO - 127.0.0.1 - - [30/Jan/2025 13:14:19] "GET / HTTP/1.1" 200 -
+2025-01-30 13:14:27,297 - INFO - 127.0.0.1 - - [30/Jan/2025 13:14:27] "GET / HTTP/1.1" 200 -
+2025-01-30 13:14:47,047 - INFO - 127.0.0.1 - - [30/Jan/2025 13:14:47] "GET / HTTP/1.1" 200 -
+2025-01-30 13:14:53,228 - INFO - 127.0.0.1 - - [30/Jan/2025 13:14:53] "GET / HTTP/1.1" 200 -
+2025-01-30 13:15:34,674 - INFO - 127.0.0.1 - - [30/Jan/2025 13:15:34] "GET / HTTP/1.1" 200 -
+2025-01-30 13:15:34,679 - INFO - 127.0.0.1 - - [30/Jan/2025 13:15:34] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-30 13:15:34,692 - INFO - 127.0.0.1 - - [30/Jan/2025 13:15:34] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-30 13:16:15,932 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-30 13:16:15,932 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-30 13:16:15,934 - INFO -  * Restarting with stat
+2025-01-30 13:16:16,551 - WARNING -  * Debugger is active!
+2025-01-30 13:16:16,559 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 13:16:17,999 - INFO - 127.0.0.1 - - [30/Jan/2025 13:16:17] "GET / HTTP/1.1" 200 -
+2025-01-30 13:16:18,022 - INFO - 127.0.0.1 - - [30/Jan/2025 13:16:18] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-30 13:16:18,028 - INFO - 127.0.0.1 - - [30/Jan/2025 13:16:18] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-30 13:16:28,533 - INFO - 🗑️ Usunięto paczkę 11
+2025-01-30 13:16:28,533 - INFO - 127.0.0.1 - - [30/Jan/2025 13:16:28] "[32mPOST /delete/1 HTTP/1.1[0m" 302 -
+2025-01-30 13:16:28,545 - INFO - 127.0.0.1 - - [30/Jan/2025 13:16:28] "GET / HTTP/1.1" 200 -
+2025-01-30 13:16:40,188 - INFO - 127.0.0.1 - - [30/Jan/2025 13:16:40] "GET / HTTP/1.1" 200 -
+2025-01-30 13:16:41,327 - INFO - 127.0.0.1 - - [30/Jan/2025 13:16:41] "GET / HTTP/1.1" 200 -
+2025-01-30 13:17:00,997 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 13:17:01,111 - INFO -  * Restarting with stat
+2025-01-30 13:17:01,767 - WARNING -  * Debugger is active!
+2025-01-30 13:17:01,775 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 13:17:05,604 - INFO - 127.0.0.1 - - [30/Jan/2025 13:17:05] "GET / HTTP/1.1" 200 -
+2025-01-30 13:17:08,051 - INFO - 127.0.0.1 - - [30/Jan/2025 13:17:08] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 13:17:17,511 - INFO - ✏️ Zaktualizowano nazwę paczki 9400111899561590599681
+2025-01-30 13:17:17,512 - INFO - 127.0.0.1 - - [30/Jan/2025 13:17:17] "[32mPOST /edit/2 HTTP/1.1[0m" 302 -
+2025-01-30 13:17:17,523 - INFO - 127.0.0.1 - - [30/Jan/2025 13:17:17] "GET / HTTP/1.1" 200 -
+2025-01-30 13:17:28,621 - INFO - 🚀 Wysyłamy zapytanie do API KD100: 
+Headers: {'API-Key': 'YnTXJnvAqwfy1686', 'signature': 'C634B2B7949ED2DBED814BFBE4CD5218', 'Content-Type': 'application/json; charset=utf-8'}
+Payload: {
+    "carrier_id": "usps",
+    "tracking_number": "9400111899561590599681",
+    "area_show": 1,
+    "order": "desc",
+    "phone": "",
+    "ship_from": "",
+    "ship_to": ""
+}
+2025-01-30 13:17:29,874 - INFO - 🔍 API Response for 9400111899561590599681: {"code":200,"message":"OK","data":{"carrier_id":"usps","tracking_number":"9400111899561590599681","order_status_code":3,"items":[{"context":"[CLEVELAND, GA 30528]Delivered, PO Box (Your item has been delivered and is available at a PO Box at 7:51 am on December 9, 2024 in CLEVELAND, GA 30528.)","time":"2024-12-09 07:51:00","order_status_code":3,"order_status_description":"Delivered","location":"CLEVELAND, GA 30528","area_name":null},{"context":"[CLEVELAND, GA 30528]Arrived at Hub","time":"2024-12-08 12:41:00","order_status_code":0,"order_status_description":"In transit","location":"CLEVELAND, GA 30528","area_name":null},{"context":"[CLEVELAND, GA 30528]Arrived at USPS Facility","time":"2024-12-08 05:57:00","order_status_code":0,"order_status_description":"In transit","location":"CLEVELAND, GA 30528","area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Departed USPS Regional Facility","time":"2024-12-08 04:36:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-06 00:00:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Arrived at USPS Regional Facility","time":"2024-12-05 10:17:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-05 09:45:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Departed USPS Regional Facility","time":"2024-12-05 09:01:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Arrived at USPS Regional Facility","time":"2024-12-05 06:32:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-05 05:27:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-04 17:08:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-04 11:50:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"[OAK CREEK WI DISTRIBUTION CENTER]Departed USPS Regional Facility","time":"2024-12-04 06:44:00","order_status_code":0,"order_status_description":"In transit","location":"OAK CREEK WI DISTRIBUTION CENTER","area_name":null},{"context":"[OAK CREEK WI DISTRIBUTION CENTER]Arrived at USPS Regional Origin Facility","time":"2024-12-03 01:54:00","order_status_code":0,"order_status_description":"In transit","location":"OAK CREEK WI DISTRIBUTION CENTER","area_name":null},{"context":"[APPLETON, WI 54914]Accepted at USPS Origin Facility","time":"2024-12-03 00:39:00","order_status_code":0,"order_status_description":"In transit","location":"APPLETON, WI 54914","area_name":null},{"context":"[APPLETON, WI 54914]Shipping Label Created, USPS Awaiting Item","time":"2024-12-02 15:49:00","order_status_code":1,"order_status_description":"Accepted","location":"APPLETON, WI 54914","area_name":null}]}}
+2025-01-30 13:17:29,892 - INFO - 127.0.0.1 - - [30/Jan/2025 13:17:29] "POST /track_or_add HTTP/1.1" 200 -
+2025-01-30 13:17:32,164 - INFO - 127.0.0.1 - - [30/Jan/2025 13:17:32] "GET / HTTP/1.1" 200 -
+2025-01-30 13:17:32,181 - INFO - 127.0.0.1 - - [30/Jan/2025 13:17:32] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-30 13:17:32,183 - INFO - 127.0.0.1 - - [30/Jan/2025 13:17:32] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-30 13:17:38,044 - INFO - 🚀 Wysyłamy zapytanie do API KD100: 
+Headers: {'API-Key': 'YnTXJnvAqwfy1686', 'signature': '99483CBA620EFB38673CFFBA8B6F8BAD', 'Content-Type': 'application/json; charset=utf-8'}
+Payload: {
+    "carrier_id": "usps",
+    "tracking_number": "0",
+    "area_show": 1,
+    "order": "desc",
+    "phone": "",
+    "ship_from": "",
+    "ship_to": ""
+}
+2025-01-30 13:17:39,407 - INFO - 🔍 API Response for 0: {"code":105,"message":"[tracking_number] length must be between 3 and 32"}
+2025-01-30 13:17:39,416 - INFO - 127.0.0.1 - - [30/Jan/2025 13:17:39] "POST /track_or_add HTTP/1.1" 200 -
+2025-01-30 13:17:43,023 - INFO - 127.0.0.1 - - [30/Jan/2025 13:17:43] "GET / HTTP/1.1" 200 -
+2025-01-30 13:17:43,028 - INFO - 127.0.0.1 - - [30/Jan/2025 13:17:43] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-30 13:17:43,031 - INFO - 127.0.0.1 - - [30/Jan/2025 13:17:43] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-30 13:21:43,057 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 13:21:43,221 - INFO -  * Restarting with stat
+2025-01-30 13:21:43,799 - WARNING -  * Debugger is active!
+2025-01-30 13:21:43,807 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 13:21:50,325 - INFO - 127.0.0.1 - - [30/Jan/2025 13:21:50] "GET / HTTP/1.1" 200 -
+2025-01-30 13:21:54,917 - INFO - 🚀 Wysyłamy zapytanie do API KD100: 
+Headers: {'API-Key': 'YnTXJnvAqwfy1686', 'signature': '99483CBA620EFB38673CFFBA8B6F8BAD', 'Content-Type': 'application/json; charset=utf-8'}
+Payload: {
+    "carrier_id": "usps",
+    "tracking_number": "0",
+    "area_show": 1,
+    "order": "desc",
+    "phone": "",
+    "ship_from": "",
+    "ship_to": ""
+}
+2025-01-30 13:21:56,119 - INFO - 🔍 API Response for 0: {"code":105,"message":"[tracking_number] length must be between 3 and 32"}
+2025-01-30 13:21:56,129 - INFO - 127.0.0.1 - - [30/Jan/2025 13:21:56] "POST /track_or_add HTTP/1.1" 200 -
+2025-01-30 13:21:58,380 - INFO - 127.0.0.1 - - [30/Jan/2025 13:21:58] "GET / HTTP/1.1" 200 -
+2025-01-30 13:21:58,400 - INFO - 127.0.0.1 - - [30/Jan/2025 13:21:58] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-30 13:21:58,410 - INFO - 127.0.0.1 - - [30/Jan/2025 13:21:58] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-30 13:24:19,808 - INFO - 127.0.0.1 - - [30/Jan/2025 13:24:19] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 13:24:31,169 - INFO - ✏️ Zaktualizowano nazwę paczki 9400111899561590599681
+2025-01-30 13:24:31,170 - INFO - 127.0.0.1 - - [30/Jan/2025 13:24:31] "[32mPOST /edit/2 HTTP/1.1[0m" 302 -
+2025-01-30 13:24:31,182 - INFO - 127.0.0.1 - - [30/Jan/2025 13:24:31] "GET / HTTP/1.1" 200 -
+2025-01-30 13:24:36,443 - INFO - 127.0.0.1 - - [30/Jan/2025 13:24:36] "GET /edit/2 HTTP/1.1" 200 -
+2025-01-30 13:24:43,024 - INFO - ✏️ Zaktualizowano nazwę paczki 9400111899561590599681
+2025-01-30 13:24:43,024 - INFO - 127.0.0.1 - - [30/Jan/2025 13:24:43] "[32mPOST /edit/2 HTTP/1.1[0m" 302 -
+2025-01-30 13:24:43,035 - INFO - 127.0.0.1 - - [30/Jan/2025 13:24:43] "GET / HTTP/1.1" 200 -
+2025-01-30 13:24:57,876 - INFO - 🚀 Wysyłamy zapytanie do API KD100: 
+Headers: {'API-Key': 'YnTXJnvAqwfy1686', 'signature': '99483CBA620EFB38673CFFBA8B6F8BAD', 'Content-Type': 'application/json; charset=utf-8'}
+Payload: {
+    "carrier_id": "usps",
+    "tracking_number": "0",
+    "area_show": 1,
+    "order": "desc",
+    "phone": "",
+    "ship_from": "",
+    "ship_to": ""
+}
+2025-01-30 13:24:59,154 - INFO - 🔍 API Response for 0: {"code":105,"message":"[tracking_number] length must be between 3 and 32"}
+2025-01-30 13:24:59,155 - INFO - 127.0.0.1 - - [30/Jan/2025 13:24:59] "POST /track_or_add HTTP/1.1" 200 -
+2025-01-30 13:25:01,816 - INFO - 127.0.0.1 - - [30/Jan/2025 13:25:01] "GET / HTTP/1.1" 200 -
+2025-01-30 13:25:01,821 - INFO - 127.0.0.1 - - [30/Jan/2025 13:25:01] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-30 13:25:01,824 - INFO - 127.0.0.1 - - [30/Jan/2025 13:25:01] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-30 13:25:14,606 - INFO - 🚀 Wysyłamy zapytanie do API KD100: 
+Headers: {'API-Key': 'YnTXJnvAqwfy1686', 'signature': 'C634B2B7949ED2DBED814BFBE4CD5218', 'Content-Type': 'application/json; charset=utf-8'}
+Payload: {
+    "carrier_id": "usps",
+    "tracking_number": "9400111899561590599681",
+    "area_show": 1,
+    "order": "desc",
+    "phone": "",
+    "ship_from": "",
+    "ship_to": ""
+}
+2025-01-30 13:25:16,014 - INFO - 🔍 API Response for 9400111899561590599681: {"code":200,"message":"OK","data":{"carrier_id":"usps","tracking_number":"9400111899561590599681","order_status_code":3,"items":[{"context":"[CLEVELAND, GA 30528]Delivered, PO Box (Your item has been delivered and is available at a PO Box at 7:51 am on December 9, 2024 in CLEVELAND, GA 30528.)","time":"2024-12-09 07:51:00","order_status_code":3,"order_status_description":"Delivered","location":"CLEVELAND, GA 30528","area_name":null},{"context":"[CLEVELAND, GA 30528]Arrived at Hub","time":"2024-12-08 12:41:00","order_status_code":0,"order_status_description":"In transit","location":"CLEVELAND, GA 30528","area_name":null},{"context":"[CLEVELAND, GA 30528]Arrived at USPS Facility","time":"2024-12-08 05:57:00","order_status_code":0,"order_status_description":"In transit","location":"CLEVELAND, GA 30528","area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Departed USPS Regional Facility","time":"2024-12-08 04:36:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-06 00:00:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Arrived at USPS Regional Facility","time":"2024-12-05 10:17:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-05 09:45:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Departed USPS Regional Facility","time":"2024-12-05 09:01:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"[ATLANTA GA DISTRIBUTION CENTER]Arrived at USPS Regional Facility","time":"2024-12-05 06:32:00","order_status_code":0,"order_status_description":"In transit","location":"ATLANTA GA DISTRIBUTION CENTER","area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-05 05:27:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-04 17:08:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"In Transit to Next Facility","time":"2024-12-04 11:50:00","order_status_code":0,"order_status_description":"In transit","location":null,"area_name":null},{"context":"[OAK CREEK WI DISTRIBUTION CENTER]Departed USPS Regional Facility","time":"2024-12-04 06:44:00","order_status_code":0,"order_status_description":"In transit","location":"OAK CREEK WI DISTRIBUTION CENTER","area_name":null},{"context":"[OAK CREEK WI DISTRIBUTION CENTER]Arrived at USPS Regional Origin Facility","time":"2024-12-03 01:54:00","order_status_code":0,"order_status_description":"In transit","location":"OAK CREEK WI DISTRIBUTION CENTER","area_name":null},{"context":"[APPLETON, WI 54914]Accepted at USPS Origin Facility","time":"2024-12-03 00:39:00","order_status_code":0,"order_status_description":"In transit","location":"APPLETON, WI 54914","area_name":null},{"context":"[APPLETON, WI 54914]Shipping Label Created, USPS Awaiting Item","time":"2024-12-02 15:49:00","order_status_code":1,"order_status_description":"Accepted","location":"APPLETON, WI 54914","area_name":null}]}}
+2025-01-30 13:25:16,031 - INFO - 127.0.0.1 - - [30/Jan/2025 13:25:16] "POST /track_or_add HTTP/1.1" 200 -
+2025-01-30 13:25:20,410 - INFO - 127.0.0.1 - - [30/Jan/2025 13:25:20] "GET / HTTP/1.1" 200 -
+2025-01-30 13:25:20,415 - INFO - 127.0.0.1 - - [30/Jan/2025 13:25:20] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-30 13:25:20,417 - INFO - 127.0.0.1 - - [30/Jan/2025 13:25:20] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-30 16:46:01,507 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:46:01,747 - INFO -  * Restarting with stat
+2025-01-30 16:46:02,580 - WARNING -  * Debugger is active!
+2025-01-30 16:46:02,684 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:46:05,810 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:46:05,962 - INFO -  * Restarting with stat
+2025-01-30 16:46:06,651 - WARNING -  * Debugger is active!
+2025-01-30 16:46:06,661 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:46:09,773 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:46:09,906 - INFO -  * Restarting with stat
+2025-01-30 16:46:10,618 - WARNING -  * Debugger is active!
+2025-01-30 16:46:10,628 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:46:18,617 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:46:18,758 - INFO -  * Restarting with stat
+2025-01-30 16:46:19,593 - WARNING -  * Debugger is active!
+2025-01-30 16:46:19,601 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:46:22,547 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:46:22,678 - INFO -  * Restarting with stat
+2025-01-30 16:46:23,599 - WARNING -  * Debugger is active!
+2025-01-30 16:46:23,609 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:46:26,621 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:46:26,740 - INFO -  * Restarting with stat
+2025-01-30 16:46:27,723 - WARNING -  * Debugger is active!
+2025-01-30 16:46:27,731 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:46:31,806 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:46:31,954 - INFO -  * Restarting with stat
+2025-01-30 16:46:33,055 - WARNING -  * Debugger is active!
+2025-01-30 16:46:33,064 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:46:35,898 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:46:36,024 - INFO -  * Restarting with stat
+2025-01-30 16:46:36,880 - WARNING -  * Debugger is active!
+2025-01-30 16:46:36,889 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:46:38,724 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:46:38,874 - INFO -  * Restarting with stat
+2025-01-30 16:46:39,732 - WARNING -  * Debugger is active!
+2025-01-30 16:46:39,745 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:46:44,002 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:46:44,152 - INFO -  * Restarting with stat
+2025-01-30 16:46:45,062 - WARNING -  * Debugger is active!
+2025-01-30 16:46:45,071 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:46:48,014 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:46:48,245 - INFO -  * Restarting with stat
+2025-01-30 16:46:48,870 - WARNING -  * Debugger is active!
+2025-01-30 16:46:48,879 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:46:50,477 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:46:50,600 - INFO -  * Restarting with stat
+2025-01-30 16:46:51,417 - WARNING -  * Debugger is active!
+2025-01-30 16:46:51,429 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:46:55,412 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:46:55,539 - INFO -  * Restarting with stat
+2025-01-30 16:46:56,219 - WARNING -  * Debugger is active!
+2025-01-30 16:46:56,226 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:46:57,844 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:46:57,952 - INFO -  * Restarting with stat
+2025-01-30 16:46:58,593 - WARNING -  * Debugger is active!
+2025-01-30 16:46:58,601 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:47:01,555 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:47:01,680 - INFO -  * Restarting with stat
+2025-01-30 16:47:02,364 - WARNING -  * Debugger is active!
+2025-01-30 16:47:02,372 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:47:04,004 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:47:04,114 - INFO -  * Restarting with stat
+2025-01-30 16:47:04,788 - WARNING -  * Debugger is active!
+2025-01-30 16:47:04,795 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:47:08,798 - INFO -  * Detected change in '/Users/kamilagwiazda/Desktop/projekt2/app.py', reloading
+2025-01-30 16:47:08,902 - INFO -  * Restarting with stat
+2025-01-30 16:47:09,465 - WARNING -  * Debugger is active!
+2025-01-30 16:47:09,472 - INFO -  * Debugger PIN: 106-298-193
+2025-01-30 16:50:16,981 - INFO - 127.0.0.1 - - [30/Jan/2025 16:50:16] "GET / HTTP/1.1" 200 -
+2025-01-30 16:50:56,717 - INFO - 🚀 Wysyłamy zapytanie do API KD100: 
+Headers: {'API-Key': 'YnTXJnvAqwfy1686', 'signature': 'A7561DB41C73038276D8A8535A17325B', 'Content-Type': 'application/json; charset=utf-8'}
+Payload: {
+    "carrier_id": "ups",
+    "tracking_number": "5278033475",
+    "area_show": 1,
+    "order": "desc",
+    "phone": "",
+    "ship_from": "",
+    "ship_to": ""
+}
+2025-01-30 16:50:58,590 - INFO - 🔍 API Response for 5278033475: {"code":200,"message":"OK","data":{"carrier_id":"ups","tracking_number":"5278033475","order_status_code":2,"items":[{"context":"[El Paso, TX, US]Departed Delivery Location","time":"2025-01-28 15:53:00","order_status_code":2,"order_status_description":"Exception","location":"El Paso, TX, US","area_name":null},{"context":"[El Paso, TX, US]Delivered","time":"2025-01-28 14:45:12","order_status_code":3,"order_status_description":"Delivered","location":"El Paso, TX, US","area_name":null},{"context":"[El Paso, TX, US]Out for Delivery","time":"2025-01-28 13:54:04","order_status_code":2,"order_status_description":"Exception","location":"El Paso, TX, US","area_name":null},{"context":"[El Paso, TX, US]On Hand at Destination","time":"2025-01-27 12:50:23","order_status_code":0,"order_status_description":"In transit","location":"El Paso, TX, US","area_name":null},{"context":"[Dallas/Fort Worth, TX, US]Documents turned over to UPS broker","time":"2025-01-24 12:21:00","order_status_code":0,"order_status_description":"In transit","location":"Dallas/Fort Worth, TX, US","area_name":null},{"context":"[El Paso, TX, US]Confirmed Arrival","time":"2025-01-24 00:02:00","order_status_code":0,"order_status_description":"In transit","location":"El Paso, TX, US","area_name":null},{"context":"[Los Angeles, CA, US]Other","time":"2025-01-21 12:26:01","order_status_code":0,"order_status_description":"In transit","location":"Los Angeles, CA, US","area_name":null},{"context":"[Los Angeles, CA, US]Arrived at Destination Country","time":"2025-01-21 09:53:00","order_status_code":0,"order_status_description":"In transit","location":"Los Angeles, CA, US","area_name":null},{"context":"[Hanoi, VN]null","time":"2025-01-17 19:49:00","order_status_code":0,"order_status_description":"In transit","location":"Hanoi, VN","area_name":null},{"context":"[Hanoi, VN]Confirmed Gateway Departure","time":"2025-01-17 19:49:00","order_status_code":0,"order_status_description":"In transit","location":"Hanoi, VN","area_name":null},{"context":"[Hanoi, VN]ETD from Load Port","time":"2025-01-17 19:49:00","order_status_code":0,"order_status_description":"In transit","location":"Hanoi, VN","area_name":null},{"context":"[Hanoi, VN]Departure","time":"2025-01-17 19:49:00","order_status_code":0,"order_status_description":"In transit","location":"Hanoi, VN","area_name":null},{"context":"[Hanoi, VN]Documents received from shipper","time":"2025-01-16 11:38:07","order_status_code":0,"order_status_description":"In transit","location":"Hanoi, VN","area_name":null},{"context":"[Hanoi, VN]Date Available to Ship","time":"2025-01-16 11:38:07","order_status_code":0,"order_status_description":"In transit","location":"Hanoi, VN","area_name":null},{"context":"[Hanoi, VN]Received into UPS possession","time":"2025-01-14 22:06:00","order_status_code":1,"order_status_description":"Accepted","location":"Hanoi, VN","area_name":null}]}}
+2025-01-30 16:50:58,591 - INFO - 🛠️ Zapisujemy paczkę 5278033475 ze statusem: Exception
+2025-01-30 16:50:58,597 - INFO - 127.0.0.1 - - [30/Jan/2025 16:50:58] "[32mPOST /track_or_add HTTP/1.1[0m" 302 -
+2025-01-30 16:50:58,608 - INFO - 127.0.0.1 - - [30/Jan/2025 16:50:58] "GET / HTTP/1.1" 200 -

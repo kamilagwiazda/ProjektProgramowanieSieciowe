@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Śledzenie Paczek</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 900px; /* Powiększona szerokość */
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .table-container {
+            margin-top: 20px;
+            width: 100%;
+            max-height: 60vh;
+            overflow: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            white-space: normal;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: white;
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .actions a {
+            width: 100px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: 0.3s;
+            background-color: #007bff; 
+            border: none;
+        }
+
+        .actions a:hover {
+            background-color: #0056b3;
+        }
+
+        .actions button {
+            width: 120px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: 0.3s;
+            background-color: #dc3545;
+        }
+
+        .actions button:hover {
+            background-color: #c82333;
+        }
+
+        .actions .icon {
+            font-size: 18px;
+        }
+
+        .empty-message {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8d7da;
+            color: #721c24;
+            border-radius: 6px;
+            border-left: 4px solid #d9534f;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>📦 Śledzenie Paczek</h1>
+
+        <form action="/track_or_add" method="post">
+            <div class="form-group">
+                <label for="carrier_id">Wybierz przewoźnika:</label>
+                <select id="carrier_id" name="carrier_id" required>
+                    <option value="usps">USPS</option>
+                    <option value="dhl">DHL</option>
+                    <option value="fedex">FedEx</option>
+                    <option value="ups">UPS</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tracking_number">Numer śledzenia:</label>
+                <input type="text" id="tracking_number" name="tracking_number" required placeholder="Wpisz numer paczki">
+            </div>
+
+            <button type="submit" name="action" value="track">🔍 Śledź paczkę</button>
+            <button type="submit" name="action" value="add">➕ Dodaj paczkę</button>
+        </form>
+
+        <div class="table-container">
+            <h2>📋 Lista Paczek</h2>
+
+            {% if packages %}
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 15%;">Przewoźnik</th>
+                        <th style="width: 20%;">Numer</th>
+                        <th style="width: 20%;">Nazwa paczki</th>
+                        <th style="width: 20%;">Status</th>
+                        <th style="width: 25%;">Opcje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% set status_map = {
+                        "Delivered": "Dostarczona",
+                        "Out for delivery": "W doręczeniu",
+                        "In transit": "W drodze",
+                        "Accepted": "Przyjęta",
+                        "Exception": "Wyjątek",
+                        "Pending": "Oczekuje",
+                        "Expired": "Wygasła",
+                        "Failed Attempt": "Nieudana próba doręczenia",
+                        "Info Received": "Informacja otrzymana",
+                        "Available for pickup": "Gotowa do odbioru"
+                    } %}
+                    {% for package in packages %}
+                    <tr>
+                        <td>{{ package.carrier_id | upper }}</td>
+                        <td>{{ package.tracking_number }}</td>
+                        <td>
+                            {% if package.custom_name %}
+                                {{ package.custom_name }}
+                            {% else %}
+                                <span style="color: gray;">Brak nazwy</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ status_map.get(package.status, package.status) }}</td>
+                        <td class="actions">
+                            <a href="/edit/{{ package.id }}">
+                                <span class="icon">✏️</span> Edytuj
+                            </a>
+                            <form action="/delete/{{ package.id }}" method="post">
+                                <button type="submit" onclick="return confirm('Usunąć paczkę?')">
+                                    <span class="icon">🗑️</span> Usuń
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <div class="empty-message">
+                🚨 Brak dodanych paczek! Dodaj paczkę, aby ją śledzić.
+            </div>
+            {% endif %}
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

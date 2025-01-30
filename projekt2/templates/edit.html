@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edytuj Paczkę</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .package-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .package-info p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .package-info strong {
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .btn {
+            width: 240px;
+            height: 50px; 
+            font-size: 18px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .btn-save {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-save:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-back {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>✏️ Edytuj Paczkę</h1>
+
+        <div class="package-info">
+            <p><strong>Przewoźnik:</strong> {{ package.carrier_id | upper }}</p>
+            <p><strong>Numer śledzenia:</strong> {{ package.tracking_number }}</p>
+            <p><strong>Status:</strong> 
+                {% set status_map = {
+                    "Delivered": "Dostarczona",
+                    "Out for delivery": "W doręczeniu",
+                    "In transit": "W drodze",
+                    "Accepted": "Przyjęta",
+                    "Exception": "Wyjątek",
+                    "Pending": "Oczekuje",
+                    "Expired": "Wygasła",
+                    "Failed Attempt": "Nieudana próba doręczenia",
+                    "Info Received": "Informacja otrzymana",
+                    "Available for pickup": "Gotowa do odbioru"
+                } %}
+                {{ status_map.get(package.status, package.status) }}
+            </p>
+        </div>
+
+        <form action="/edit/{{ package.id }}" method="post">
+            <label for="custom_name"><strong>Nazwa paczki:</strong></label>
+            <input type="text" id="custom_name" name="custom_name" value="{{ package.custom_name or '' }}" placeholder="Wpisz nazwę paczki">
+
+            <div class="btn-container">
+                <button type="submit" class="btn btn-save">💾 Zapisz zmiany</button>
+                <a href="/" class="btn btn-back">🔙 Powrót</a>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+</html>
+
+
+

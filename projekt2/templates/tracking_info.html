@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Paczki</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .info p {
+            font-size: 16px;
+            margin: 8px 0;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #007bff;
+        }
+
+        .history {
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .timeline {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .timeline li {
+            background: #fff;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #007bff;
+        }
+
+        .timeline li strong {
+            color: #007bff;
+        }
+
+        .back-button {
+            display: block;
+            width: calc(100% - 20px); 
+            padding: 14px; 
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: 0.3s;
+            margin: 30px auto 10px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px; 
+        }
+
+        .back-button:hover {
+            background: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>📦 Status Paczki</h1>
+
+        <div class="info">
+            <p><strong>Przewoźnik:</strong> {{ tracking_info['carrier_id'] | upper }}</p>
+            <p><strong>Numer śledzenia:</strong> {{ tracking_info['tracking_number'] }}</p>
+
+            <p><strong>Status:</strong> 
+                {% if tracking_info['order_status_code'] == 0 %}
+                    🚚 W tranzycie – przesyłka jest w drodze do odbiorcy.
+                {% elif tracking_info['order_status_code'] == 1 %}
+                    📦 Przyjęta – przewoźnik odebrał przesyłkę od nadawcy.
+                {% elif tracking_info['order_status_code'] == 2 %}
+                    ⚠️ Wyjątek – problem z przesyłką (np. zatrzymanie celne, nieudana dostawa).
+                {% elif tracking_info['order_status_code'] == 3 %}
+                    ✅ Dostarczona – przesyłka została pomyślnie dostarczona.
+                {% elif tracking_info['order_status_code'] == 4 %}
+                    🔄 Zwrócona do nadawcy – przesyłka została zwrócona do nadawcy.
+                {% elif tracking_info['order_status_code'] == 5 %}
+                    🏠 W doręczeniu – przewoźnik jest w trakcie dostarczania przesyłki.
+                {% elif tracking_info['order_status_code'] == 6 %}
+                    🔙 Zwracana do nadawcy – przesyłka jest w drodze powrotnej do nadawcy.
+                {% elif tracking_info['order_status_code'] == 7 %}
+                    🔁 Przeładunek – przesyłka jest przekazywana między przewoźnikami.
+                {% elif tracking_info['order_status_code'] == 8 %}
+                    🏛️ Odprawa celna – przesyłka przechodzi przez procedury celne.
+                {% elif tracking_info['order_status_code'] == 14 %}
+                    ❌ Odbiorca odmówił – odbiorca odmówił przyjęcia przesyłki.
+                {% else %}
+                    ❓ Nieznany status – skontaktuj się z przewoźnikiem.
+                {% endif %}
+            </p>
+        </div>
+
+        <div class="history">Historia przesyłki:</div>
+        <ul class="timeline">
+            {% for event in tracking_info['items'] %}
+            <li>
+                <strong>{{ event['time'] }}</strong><br>
+                {{ event['order_status_description'] }} – {{ event['context'] }}
+            </li>
+            {% endfor %}
+        </ul>
+
+        <a href="/" class="back-button">
+            🔍 Wróć do wyszukiwania
+        </a>
+    </div>
+
+</body>
+</html>
